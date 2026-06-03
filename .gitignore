@@ -1,0 +1,24 @@
+# Entornos virtuales
+venv/
+ENV/
+env/
+.env
+
+# Caché de Python
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local (¡Muy importante no subirla!)
+*.sqlite3
+
+# Archivos del sistema y editores
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Archivos de cobertura de pruebas (útil para cuando configures SonarQube)
+.coverage
+htmlcov/
+.scannerwork/
