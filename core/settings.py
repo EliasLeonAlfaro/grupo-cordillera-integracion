@@ -118,7 +118,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-MS_SUCURSALES_URL = "http://localhost:8081"
-MS_PRODUCTOS_URL = "http://localhost:8082"
-MS_VENTAS_URL = "http://localhost:8083"
-MS_STOCK_URL = "http://localhost:8084"
+# URLs reales de los microservicios Spring Boot
+MS_VENTAS_URL = "http://localhost:8081"    
+MS_PRODUCTOS_URL = "http://localhost:8082" 
+MS_SUCURSALES_URL = "http://localhost:8084"
+MS_STOCK_URL = "http://localhost:8085"     
+MS_KPI_URL = "http://localhost:8087"       
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [], # Esto limpia cualquier validación obligatoria de sesión para pruebas masivas
+}
